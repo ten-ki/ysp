@@ -1,42 +1,21 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+:root { --primary: #FF0000; --bg: #f0f2f5; --text: #333; }
+body { margin: 0; font-family: sans-serif; background-color: var(--bg); color: var(--text); }
+.app-container { max-width: 600px; margin: 0 auto; min-height: 100vh; display: flex; flex-direction: column; }
+.stats-header { background: #222; color: white; padding: 12px; display: flex; justify-content: space-around; font-weight: bold; position: sticky; top: 0; z-index: 100; }
+.tabs { display: flex; background: white; border-bottom: 1px solid #ddd; }
+.tabs button { flex: 1; padding: 15px; border: none; background: none; font-weight: bold; color: #888; border-bottom: 3px solid transparent; }
+.tabs button.active { color: var(--primary); border-bottom: 3px solid var(--primary); }
+.content-area { padding: 15px; flex: 1; }
+.card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 15px; }
+input, textarea { width: 100%; padding: 12px; margin: 8px 0 16px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
+.primary-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 15px; border-radius: 30px; font-size: 18px; font-weight: bold; }
+.primary-btn:disabled { background: #ccc; }
+.train-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.train-card { text-align: center; border: 1px solid #eee; }
+.cost { display: block; margin-top: 5px; color: orange; font-weight: bold; }
+.log-card { background: white; border-radius: 10px; padding: 15px; margin-bottom: 10px; }
+.flaming { background: #fff0f0; border: 2px solid red; }
+.log-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px; }
+.log-stats { font-size: 0.9em; color: #555; margin-bottom: 10px; }
+.comments-box { background: #f9f9f9; padding: 10px; border-radius: 5px; font-size: 0.85em; }
+.hate-badge { color: red; margin-left: 5px; }

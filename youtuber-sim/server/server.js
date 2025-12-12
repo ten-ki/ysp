@@ -23,7 +23,7 @@ app.post('/api/evaluate', async (req, res) => {
     cmts:短い視聴者コメント3つ。
     形式:{"score":0,"hate":0,"subs":0,"money":0,"cmts":["","",""]}`;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     const result = await model.generateContent(prompt);
     const jsonMatch = result.response.text().match(/\{[\s\S]*\}/);
     res.json(JSON.parse(jsonMatch[0]));
